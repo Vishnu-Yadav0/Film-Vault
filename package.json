@@ -2,7 +2,7 @@
   "name": "project-filmvault",
   "version": "1.0.0",
   "description": "Film Vault is a movie and TV show database app inspired by IMDb, built for film enthusiasts. It allows users to discover, explore, and track movies and series with detailed information on ratings, popularity, and genres. With the \"Add to Wishlist\" feature, users can easily save and organize the titles they want to watch later, making Film Vault the perfect companion for every movie lover.",
-  "main": "index.js",
+  "main": "main.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
