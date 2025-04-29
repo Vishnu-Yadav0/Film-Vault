@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Vishnu-Yadav0/Film-Vault/issues"
   },
-  "homepage": "https://github.com/Vishnu-Yadav0/Film-Vault#readme"
+  "homepage": "https://github.com/Vishnu-Yadav0/Film-Vault#readme",
+  "dependencies": {
+    "react-icons": "^5.5.0"
+  }
 }

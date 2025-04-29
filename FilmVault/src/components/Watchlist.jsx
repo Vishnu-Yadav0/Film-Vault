@@ -1,6 +1,16 @@
 import React from 'react'
+import { useState } from 'react'
+import { FaTrash } from 'react-icons/fa'
 
-const Watchlist = () => {
+
+const Watchlist = ({watchlist, handleRemoveFromWatchlist}) => {
+
+  const [search, setSearch] = useState('')
+
+  let handleSearch = (e) =>{
+    setSearch(e.target.value)
+  }
+
   return (
     <>
     <div className='flex justify-center flex-wrap m-4 gap-4'>
@@ -11,7 +21,7 @@ const Watchlist = () => {
     </div>
 
     <div className='flex justify-center my-4'>
-        <input type="text" placeholder='Search Movies' className='h-[3rem] w-[18rem] px-2 border rounded-xl outline-none bg-gray-400/20'/>
+        <input onChange={handleSearch} value={search} type="text" placeholder='Search Movies' className='h-[3rem] w-[18rem] px-2 border rounded-xl outline-none bg-gray-400/20'/>
     </div>
 
     <div className='overflow-hidden rounded-lg border border-gray-200 m-8'>
@@ -27,28 +37,25 @@ const Watchlist = () => {
         </thead>
 
         <tbody>
-          <tr className='border-b'>
-            <td className='py-4'>
-              <img className='h-[8rem] w-[6rem] mx-auto' src="https://wallpaperaccess.com/full/917610.jpg" alt="" />
-            </td>
-            <td><div className='mx-10'>Black Panther </div></td>
-            <td>8.5</td>
-            <td>9</td>
-            <td>Action</td>
-            <td className='text-red-600 '>Delete</td>
-          </tr>
 
-
-          <tr className='border-b'>
+          {watchlist.filter((movieObj)=>{
+            return movieObj.title.toLowerCase().includes(search.toLocaleLowerCase())
+          }).map((movieObj)=>{
+            return <tr className='border-b'>
             <td className='py-4'>
-              <img className='h-[8rem] w-[6rem] mx-auto' src="https://wallpaperaccess.com/full/917610.jpg" alt="" />
+              <img className='h-[8rem] w-[6rem] mx-auto' src={`https://image.tmdb.org/t/p/original/${movieObj.poster_path}`} alt="" />
             </td>
-            <td><div className='mx-10'>Black Panther </div></td>
-            <td>8.5</td>
-            <td>9</td>
-            <td>Action</td>
-            <td className='text-red-600 '>Delete</td>
+            <td><div className='mx-10'>{movieObj.title} </div></td>
+            <td>{movieObj.vote_average}</td>
+            <td>{movieObj.popularity}</td>
+            <td>{movieObj.genre_ids}</td>
+            <td >
+              <button onClick={() => handleRemoveFromWatchlist(movieObj)} className='text-red-600 hover:text-red-800 text-lg'>
+              <FaTrash size={30}/>
+              </button> 
+            </td>
           </tr>
+          })}
 
         </tbody>
       </table>
