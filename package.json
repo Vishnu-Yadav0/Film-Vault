@@ -1,0 +1,19 @@
+{
+  "name": "project-filmvault",
+  "version": "1.0.0",
+  "description": "Film Vault is a movie and TV show database app inspired by IMDb, built for film enthusiasts. It allows users to discover, explore, and track movies and series with detailed information on ratings, popularity, and genres. With the \"Add to Wishlist\" feature, users can easily save and organize the titles they want to watch later, making Film Vault the perfect companion for every movie lover.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishnu-Yadav0/Film-Vault.git"
+  },
+  "author": "Vishnu Vardhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vishnu-Yadav0/Film-Vault/issues"
+  },
+  "homepage": "https://github.com/Vishnu-Yadav0/Film-Vault#readme"
+}
