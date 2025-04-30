@@ -1,15 +1,32 @@
-import React from 'react'
 import { useState } from 'react'
 import { FaTrash } from 'react-icons/fa'
 
 
-const Watchlist = ({watchlist, handleRemoveFromWatchlist}) => {
+const Watchlist = ({watchlist,setWatchlist, handleRemoveFromWatchlist}) => {
 
   const [search, setSearch] = useState('')
 
   let handleSearch = (e) =>{
     setSearch(e.target.value)
   }
+
+  let sortIncreasing = () =>{
+    let sortedIncreasing = watchlist.sort((movieA,movieB) =>{
+      return movieA.vote_average - movieB.vote_average
+    })
+
+    setWatchlist([...sortedIncreasing])
+  }
+
+  let sortDecreasing = () =>{
+    let sortedDecreasing = watchlist.sort((movieA, movieB)=>{
+      return movieB.vote_average - movieA.vote_average
+    })
+
+    setWatchlist([...sortedDecreasing])
+  }
+
+
 
   return (
     <>
@@ -30,7 +47,11 @@ const Watchlist = ({watchlist, handleRemoveFromWatchlist}) => {
           <tr>
             <th>Poster</th>
             <th>Name</th>
-            <th>Ratings</th>
+            <th className='flex justify-center gap-2'>
+              <div onClick={sortIncreasing} className='hover:cursor-pointer'><i className="fa-solid fa-arrow-up"></i></div>
+              Ratings
+              <div onClick={sortDecreasing} className='hover:cursor-pointer'><i className="fa-solid fa-arrow-down"></i></div>
+              </th>
             <th>Popularity</th>
             <th>Genre</th>
           </tr>
