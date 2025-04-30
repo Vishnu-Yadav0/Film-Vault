@@ -126,7 +126,6 @@ export default defineConfig({
 
 ![Watchlist](DemoPreview/watchlist.png)
 
-### Demo
 
 ## 🎬 Demo
 
