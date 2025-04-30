@@ -125,6 +125,13 @@ export default defineConfig({
 
   - ☁️ Cloud deployment (Netlify, Vercel)
 
+## 📸 Preview
+
+[HomePage](\DemoPreview\HomePage1.png)
+[Movies1](\DemoPreview\Movies1.png)
+[Movies2](\DemoPreview\Movies2.png)
+[Watchlist](\DemoPreview\watchlist.png)
+
 ## 👨‍💻 Author
  Vishnu Vardhan Yadav
 📍 Kadapa
