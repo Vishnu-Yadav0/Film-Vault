@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { FaTrash } from 'react-icons/fa'
+import genreIdToName from '../utilities/genreMapping';
+
 
 
 const Watchlist = ({watchlist,setWatchlist, handleRemoveFromWatchlist}) => {
@@ -62,14 +64,14 @@ const Watchlist = ({watchlist,setWatchlist, handleRemoveFromWatchlist}) => {
           {watchlist.filter((movieObj)=>{
             return movieObj.title.toLowerCase().includes(search.toLocaleLowerCase())
           }).map((movieObj)=>{
-            return <tr className='border-b'>
+            return <tr  key={movieObj.id} className='border-b'>
             <td className='py-4'>
               <img className='h-[8rem] w-[6rem] mx-auto' src={`https://image.tmdb.org/t/p/original/${movieObj.poster_path}`} alt="" />
             </td>
             <td><div className='mx-10'>{movieObj.title} </div></td>
             <td>{movieObj.vote_average}</td>
             <td>{movieObj.popularity}</td>
-            <td>{movieObj.genre_ids}</td>
+            <td>{movieObj.genre_ids.map(id => genreIdToName[id]).join(", ")}</td>
             <td >
               <button onClick={() => handleRemoveFromWatchlist(movieObj)} className='text-red-600 hover:text-red-800 text-lg'>
               <FaTrash size={30}/>
