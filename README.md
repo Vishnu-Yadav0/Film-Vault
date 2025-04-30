@@ -130,7 +130,7 @@ export default defineConfig({
 
 ## 🎬 Demo
 
-[![Watch the demo](DemoPreview/Movies1.png)](https://drive.google.com/file/d/1LRDWE7gD6QHhf-six7kk6PEy8aRUG15U/view?usp=sharing)
+[![Watch the demo]](https://drive.google.com/file/d/1LRDWE7gD6QHhf-six7kk6PEy8aRUG15U/view?usp=sharing)]
 
 
 ## 🚧 Future Improvements
