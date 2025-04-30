@@ -128,7 +128,10 @@ export default defineConfig({
 
 ### Demo
 
-![Demo Preview](https://drive.google.com/file/d/1LRDWE7gD6QHhf-six7kk6PEy8aRUG15U/view?usp=sharing)
+## 🎬 Demo
+
+[![Watch the demo](DemoPreview/Movies1.png)](https://drive.google.com/file/d/1LRDWE7gD6QHhf-six7kk6PEy8aRUG15U/view?usp=sharing)
+
 
 ## 🚧 Future Improvements
   - 🔐 Move TMDB API key to .env for security
