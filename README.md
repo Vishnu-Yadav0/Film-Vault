@@ -133,10 +133,10 @@ export default defineConfig({
   - ☁️ Cloud deployment (Netlify, Vercel)
 
 ## 👨‍💻 Author
- Vishnu Vardhan Yadav
-📍 Kadapa
-💼 Aspiring DevOps & Full Stack Engineer
-🔗 [LinkedIn](https://www.linkedin.com/in/vishnu-yadav-844eb/) | [GitHub](https://github.com/Vishnu-Yadav0/)
+ - Vishnu Vardhan Yadav
+ - 📍 Kadapa
+ - 💼 Aspiring DevOps & Full Stack Engineer
+ - 🔗 [LinkedIn](https://www.linkedin.com/in/vishnu-yadav-844eb/) | [GitHub](https://github.com/Vishnu-Yadav0/)
 
 ## 📃 License
 This project is licensed under the MIT License.
